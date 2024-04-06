@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lightHouse </title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link href="index.css" rel="stylesheet"/>
+    
+    <style>
+      body {
+        background: url("https://web-dev.imgix.net/image/1L2RBhCLSnXjCnSlevaDjy3vba73/6GPqQDYxZnVq8qF6DJ02.jpeg?auto=format")
+          center center/cover no-repeat fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="section1">
+            <div class="input-group input-group-small mb-3 input--sec" >
+                <input type="text" class="form-control" id="textInput" placeholder="Enter url" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="runButton1" >GO!</button>
+            </div>
+            <div class="btn-group " role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary btn-md btn--html" id="openButton">HTML Report</button>
+                <button type="button" class="btn btn-primary btn-md btn--dwnld" id="download--json">Download Json</button>
+            </div>
+        </div>
+          
+            <div class="section2">
+              <div id="errorMessage" >Invalid URL</div>
+              <iframe id="iframe" src="../reports.report.html" frameborder="0" width="600" height="400"></iframe>
+              
+              <div class="field--div" id="field--div">
+                <div class="dropdown" id="dropdown">
+                  <!-- <label for="fields">Choose a Field:</label> -->
+                  <select class="form-select" name="fields" id="fields">
+                    <option value="none" selected="selected" >Options </option>
+                    <option value="performance">Performance</option>
+                    <option value="accessibility">Accessibility</option>
+                    <option value="best-practices">Best Practices</option>
+                    <option value="seo">SEO</option>
+                    <option value="pwa">PWA</option>
+                    <option value="all">ALL</option>
+                  </select>
+                </div>
+                  <div id="field-output"></div>
+                  <div id="output"></div>
+            </div>
+           </div>
+          
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <div class="loader-Container" id="loader-Container">
+      <div class="loader"></div>
+    </div>
+  </body>
+</html>
